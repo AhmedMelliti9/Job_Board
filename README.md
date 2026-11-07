@@ -1,4 +1,4 @@
-# Project 04 — Job Board
+# Job Board
 
 A fullstack web application for recruiting firms to manage and publish open job positions. The application replaces spreadsheet-based workflows by enabling recruiters to post, browse, filter, close, and delete job openings in real-time.
 
