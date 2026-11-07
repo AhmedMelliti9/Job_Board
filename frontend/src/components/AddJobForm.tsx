@@ -317,3 +317,4 @@ export const AddJobForm: React.FC<AddJobFormProps> = ({ onSubmit }) => {
     </div>
   )
 }
+

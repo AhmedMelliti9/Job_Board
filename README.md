@@ -222,3 +222,4 @@ Runs 33 automated tests across 7 test suites:
 1. **Strict CORS**: Only the frontend origin is permitted; wildcard access is rejected.
 2. **Dual-Layer Validation**: Frontend checks improve user feedback; backend Pydantic models guarantee data integrity.
 3. **Information Disclosure Prevention**: Global 500 handler logs server-side stack traces and returns generic error messages to clients.
+

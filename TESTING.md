@@ -73,3 +73,4 @@ npm test
 - `src/components/JobList.test.tsx` (4 tests): Loading spinner, error container, empty state variants.
 - `src/test/errorScenarios.test.tsx` (6 tests): End-to-end failure scenarios (network, 404, 422, 500, in-flight, error boundary).
 - `src/App.test.tsx` (3 tests): Full application integration.
+
