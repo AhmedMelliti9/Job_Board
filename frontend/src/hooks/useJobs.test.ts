@@ -131,3 +131,4 @@ describe('useJobs custom hook', () => {
     expect(result.current.error).toBe('Failed to delete job position.')
   })
 })
+
