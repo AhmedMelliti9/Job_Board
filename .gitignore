@@ -23,3 +23,4 @@ venv/
 # Environment
 .env
 .env.local
+

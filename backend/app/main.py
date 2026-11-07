@@ -24,3 +24,4 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {"message": "Job Board API is running"}
+
