@@ -81,6 +81,15 @@ export async function fetchJobs(filters?: JobFilters): Promise<Job[]> {
   })
 }
 
+export async function fetchJobById(id: string): Promise<Job> {
+  return request<Job>(`/jobs/${encodeURIComponent(id)}`, {
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+    },
+  })
+}
+
 export async function createJob(data: CreateJobInput): Promise<Job> {
   return request<Job>('/jobs', {
     method: 'POST',

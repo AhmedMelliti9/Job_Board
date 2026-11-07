@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { Job } from '../types/job'
 
 interface JobCardProps {
@@ -128,6 +129,13 @@ export const JobCard: React.FC<JobCardProps> = ({ job, onClose, onDelete }) => {
         </div>
 
         <div className="flex sm:flex-col gap-2 shrink-0">
+          <Link
+            to={`/jobs/${job.id}`}
+            className="inline-flex items-center justify-center px-3.5 py-1.5 text-xs font-semibold rounded-lg text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition-colors"
+          >
+            View Details &rarr;
+          </Link>
+
           {job.is_open && (
             <button
               onClick={handleClose}
