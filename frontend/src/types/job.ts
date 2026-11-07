@@ -30,3 +30,4 @@ export interface ValidationErrorItem {
 export interface ApiErrorResponse {
   detail?: string | ValidationErrorItem[]
 }
+
