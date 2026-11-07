@@ -199,8 +199,15 @@ export const JobCard: React.FC<JobCardProps> = ({ job, onClose, onDelete }) => {
       </div>
 
       {cardError && (
-        <div className="mt-3 p-2 bg-rose-50 border border-rose-200 rounded text-xs text-rose-700">
-          {cardError}
+        <div className="mt-3 p-2.5 bg-rose-50 border border-rose-200 rounded-lg flex items-center justify-between gap-2 text-xs text-rose-800">
+          <span>{cardError}</span>
+          <button
+            type="button"
+            onClick={() => setCardError(null)}
+            className="text-rose-600 hover:text-rose-800 font-semibold underline shrink-0"
+          >
+            Dismiss
+          </button>
         </div>
       )}
     </div>
