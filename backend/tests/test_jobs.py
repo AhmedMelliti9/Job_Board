@@ -232,3 +232,4 @@ def test_delete_job(client):
     # Verify it is deleted
     get_res = client.get(f"/jobs/{job_id}")
     assert get_res.status_code == 404
+
