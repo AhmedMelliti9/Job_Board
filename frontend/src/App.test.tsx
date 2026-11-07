@@ -103,3 +103,4 @@ describe('App full flow integration', () => {
     expect(screen.getByText('Try Again')).toBeInTheDocument()
   })
 })
+

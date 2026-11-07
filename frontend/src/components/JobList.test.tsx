@@ -75,3 +75,4 @@ describe('JobList component', () => {
     expect(screen.getByText('No Matching Positions')).toBeInTheDocument()
   })
 })
+

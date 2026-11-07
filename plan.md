@@ -444,15 +444,15 @@ Write the API contract (types and routes) **before** writing either the frontend
 
 ## 16. Definition of Done
 
-- [ ] All functional requirements (FR-01 through FR-09) are met
-- [ ] Frontend and backend communicate successfully
-- [ ] CORS is correctly configured
-- [ ] Every API call handles loading, success, and error states
-- [ ] UI does not crash on any API error
-- [ ] Client-side and server-side validation are both present
-- [ ] Backend API tests pass: `pytest`
-- [ ] Frontend API client unit tests pass: `npm run test`
-- [ ] README.md explains how to run both applications
-- [ ] Feature branches used throughout
-- [ ] Debugging exercise completed and answers written
+- [x] All functional requirements (FR-01 through FR-09) are met
+- [x] Frontend and backend communicate successfully
+- [x] CORS is correctly configured
+- [x] Every API call handles loading, success, and error states
+- [x] UI does not crash on any API error
+- [x] Client-side and server-side validation are both present
+- [x] Backend API tests pass: `pytest` (7/7 passed)
+- [x] Frontend API client unit tests pass: `npm run test` (33/33 passed)
+- [x] README.md explains how to run both applications
+- [x] Feature branches used throughout
+- [x] Debugging exercise completed and answers written (in TESTING.md & README.md)
 

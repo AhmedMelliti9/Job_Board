@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { ApiError, closeJob, createJob, deleteJob, fetchJobs } from './jobs'
+import { ApiError, closeJob, createJob, deleteJob, fetchJobById, fetchJobs } from './jobs'
 
 describe('Job Board API Client (api/jobs.ts)', () => {
   const originalFetch = globalThis.fetch
@@ -34,6 +34,31 @@ describe('Job Board API Client (api/jobs.ts)', () => {
     const jobs = await fetchJobs()
     expect(globalThis.fetch).toHaveBeenCalledWith('http://localhost:8000/jobs', expect.any(Object))
     expect(jobs).toEqual(mockJobs)
+  })
+
+  it('fetchJobById returns single job on 200', async () => {
+    const mockJob = {
+      id: 'job-123',
+      title: 'Staff Architect',
+      department: 'Engineering',
+      location: 'Remote',
+      description: 'System design',
+      salary_range: '$160k',
+      is_open: true,
+    }
+
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: vi.fn().mockResolvedValue(mockJob),
+    } as unknown as Response)
+
+    const job = await fetchJobById('job-123')
+    expect(globalThis.fetch).toHaveBeenCalledWith(
+      'http://localhost:8000/jobs/job-123',
+      expect.objectContaining({ method: 'GET' }),
+    )
+    expect(job).toEqual(mockJob)
   })
 
   it('fetchJobs appends filter query parameters correctly', async () => {
